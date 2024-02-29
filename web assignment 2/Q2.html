@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in/Sign up form</title>
+</head>
+<body>
+    <h1>Sign in/Sign up form</h1>
+    <form>
+        <label for="Username">User name</label><br>
+        <input type="text" id="Username" name="Username"><br>
+        <label for="Password">Password</label><br>
+        <input type="text" id="Password" name="Password"><br>
+        <label for="birthdate">Birthdate</label><br>
+        <input type="date" id="birthdate" name="birthdate"><br>
+        <label for="email">Email</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="Gender">Gender(Male/Female)</label><br>
+        <input type="text" id="Gender" name="Gender"><br>
+        <label for="Phonenumber">Phone number</label><br>
+        <input type="number" id="Phonenumber" name="Phone number"><br>
+        <label for="Zipcode">Zip code</label><br>
+        <input type="number" id="Zipcode" name="Zipcode"><br>
+        <label for="country">Country</label><br>
+        <input type="text" id="country" name="country"><br>
+        <input type="button" value="Submit" onclick="separatevalidation()">
+    </form>
+
+    <script>
+        function separatevalidation() {
+            var username = document.getElementById('Username').value;
+            var password = document.getElementById('Password').value;
+            var birthdate = document.getElementById('birthdate').value;
+            var email = document.getElementById('email').value;
+            var gender = document.getElementById('Gender').value;
+            var phonenumber = document.getElementById('Phonenumber').value;
+            var zipcode = document.getElementById('Zipcode').value;
+            var country = document.getElementById('country').value;
+            
+            if (isNaN(username)) {
+            } else {
+                alert("Username must be in text form");
+                return;
+            }
+
+            if (isNaN(email)) {
+            } else {
+                alert("Email must be in text form");
+                return;
+            }
+
+            if (gender.toLowerCase() === 'male' || gender.toLowerCase() === 'female') {
+            } else {
+                alert("Gender should be male or female");
+                return;
+            }
+
+            if (!isNaN(phonenumber)) {
+            } else {
+                alert("Phone number should be in number form");
+                return;
+            }
+
+            if (!isNaN(zipcode)) {
+                
+            } else {
+                alert("Zipcode should be in number form");
+                return;
+            }
+
+            if (isNaN(country)) {
+                
+            } else {
+                alert("Country should be in text form");
+                return;
+            }
+
+           
+            alert("All fields validated successfully!");
+        }
+       
+    </script>
+</body>
+</html>
