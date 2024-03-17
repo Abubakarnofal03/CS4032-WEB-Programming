@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(21, 21, 206, 0.605); /* Set blue background */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+        }
+        
+        .container {
+            background-color: white; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .container input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        
+        .container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px; /* Add margin to separate the buttons */
+        }
+        
+        .container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Weather App</h2>
+        <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button type="submit">Search</button>
+        </form>
+        <button id="getLocationBtn">Get Device Location</button>
+    </div>
+</body>
+</html>
